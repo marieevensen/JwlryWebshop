@@ -1,0 +1,13 @@
+*[_type == 'products'] {
+    _id,
+    image{
+        asset->{
+            url
+        }
+    },
+    name,
+    price,
+    slug {
+        current
+    }
+}
