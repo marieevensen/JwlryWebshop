@@ -2,7 +2,7 @@
     <div class="header">
         <div>
             <RouterLink :to="{ name: 'home' }">
-                <img class="header__logo" src="/images/logo.png" alt="Logo til butikken Jewelry, trykk her for å komme til forsiden">
+                <img class="header__logo" src="/images/logo.png" alt="Logo to the webshop Jewelry, click here to go to the homepage">
             </RouterLink>
         </div>
 
@@ -29,11 +29,6 @@
 				return this.$store.getters.getItems;
 			},
 
-            // countItem() {
-			//  	return this.cartItems.reduce(item) {
-			//  		return item.quantity++;
-			// 	};
-			// },
             countItem() {
                 return this.$store.getters.getItemCount
             }
@@ -53,7 +48,7 @@
     }
 
     .header__link {
-        color: black;
+        color: var(--foreground);
         text-decoration: none;
         font-weight: bold;
     }

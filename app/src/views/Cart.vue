@@ -5,14 +5,14 @@
 
 			<span class="item__name">{{ item.product.name }}</span>
            	
-		    <span>{{ item.product.price }}kr</span>
+		    <span class="item__price">{{ item.product.price }}kr</span>
  
 			<div class="item__quantity">
-				<button class="item__quantity--button" @click="minusQuantity(item)">-</button>
+				<button class="item__quantity--minus" @click="minusQuantity(item)">-</button>
 			
 				<span class="item__quantity--number">{{ item.quantity }}</span>
 			
-				<button class="item__quantity--button" @click="plusQuantity(item)">+</button>
+				<button class="item__quantity--plus" @click="plusQuantity(item)">+</button>
 			</div>
 
 			<button class="item__remove-button" @click="removeItem(index)">X</button>
@@ -23,7 +23,7 @@
 				Total price: {{ cartPriceTotal }}kr
 			</div>
 
-			<button class="purchase__button" @click="removeAllItems()">
+			<button class="purchase-button" @click="removeAllItems()">
 				Purchase
 			</button>
 		</div>
@@ -88,16 +88,21 @@
 
 	.item__image {
 		width: 150px;
-		border: 1px solid #c1ab87;
+		border: 1px solid var(--details);
 	}
 
 	.item__name {
-		margin: 0px 30px;
+		margin: 5px 30px;
 		font-weight: bold;
 	}
 
+	.item__price {
+		margin: 5px 0;
+	}
+
 	.item__quantity {
-		background-color: #c1ab87;
+		background-color: var(--details);
+		margin: 5px 0;
 	}
 
 	@media screen and (min-width: 1000px) {
@@ -106,13 +111,21 @@
 		}
 	}
 
-	.item__quantity--button {
+	.item__quantity--minus, .item__quantity--plus {
 		padding: 0 10px;
 	}
 
-	.item__quantity--button:hover {
-		background-color: #d6c09c;
+	.item__quantity--minus:hover, .item__quantity--plus:hover {
+		background-color: var(--hover);
 	}
+
+	.item__remove-button {
+		margin: 5px;
+	}
+
+	.item__remove-button:hover {
+		font-weight: bold;
+	}	
 
 	@media screen and (min-width: 1000px) {
 		.item__remove-button {
@@ -130,13 +143,13 @@
 		font-size: 1.2em;
 	}
 
-	.purchase__button {
+	.purchase-button {
 		padding: 10px;
-		background-color: #c1ab87;
+		background-color: var(--details);
 	}
 
-	.purchase__button:hover {
+	.purchase-button:hover {
 		font-weight: bold;
-		background-color: #d6c09c;
+		background-color: var(--hover);
 	}
 </style>

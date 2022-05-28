@@ -62,7 +62,7 @@
 
 	.product__image {
 		width: 250px;
-		border: 2px solid #c1ab87;
+		border: 2px solid var(--beige);
 	}
 
     @media screen and (max-width: 900px) {
@@ -105,11 +105,12 @@
     .info__button {
         margin-left: 40px;
         padding: 10px;
-        background-color: #c1ab87;
+        background-color: var(--details);
+        color: var(--foreground);
     }
 
     .info__button:hover {
         font-weight: bold;
-        background-color: #d6c09c;
+        background-color: var(--hover);
     }
 </style>

@@ -55,7 +55,7 @@
 
 	.products__image {
 		width: 280px;
-		border: 2px solid #c1ab87;
+		border: 2px solid var(--details);
 	}
 
 	.products__image-text {
@@ -63,7 +63,7 @@
 		margin-left: 70px;
 		position: absolute;
 		opacity: 0.0;
-		color: black;
+		color: var(--foreground);
 	}
 
 	.products__image-text:hover {

@@ -1,6 +1,8 @@
 :root {
 	--background: #eddfc7;
 	--foreground: black;
+	--hover: #d6c09c;
+	--details: #c1ab87;
 	
 	--font-family: 'Inter', sans-serif;
 	--font-size: 20px;

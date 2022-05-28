@@ -32,6 +32,12 @@
 		margin-bottom: 120px;
 	}
 
+	@media screen and (max-width: 600px) {
+		.frontpage__top {
+			margin-bottom: 50px;
+		}
+	}
+
 	.top__image {
 		width: 280px;
 		border-radius: 70% 70% 0 0;
@@ -40,6 +46,7 @@
 	@media screen and (max-width: 600px) {
 		.top__image {
 			width: 200px;
+			margin: 20px 0;
 		}
 	}
 
