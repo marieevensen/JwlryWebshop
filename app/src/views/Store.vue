@@ -1,11 +1,12 @@
 <template>
     <div v-if="loading">...</div>
 
-	<div class="products" v-else>
-		<div v-for="product in result">
-			<RouterLink  :to="{ name: 'product', params: { product_slug: product.slug.current }}">
-				<div class="products__image-text">Click to see the product</div>
-				<img class="products__image" :src="product.image.asset.url" alt="Bilde av produktet">
+	<main class="products" v-else>
+		<section v-for="product in result">
+			<RouterLink  :to="{ name: 'product', params: { product_slug: product.slug.current }}" aria-label="Klikk her for å se produkt">
+				<div class="products__image-text">Klikk her for å se produkt</div>
+
+				<img class="products__image" :src="product.image.asset.url" alt="bilde av produktet">
 			</RouterLink>
 
 			<div class="products__name">
@@ -15,9 +16,13 @@
 			<div class="products__price">
 				{{ product.price }}kr
 			</div>
-		</div>
-	</div>
+		</section>
+	</main>
 </template>
+
+<!-- Kommenterer script
+	Bruker slug for å kunne navigere til de forskjellige produktene
+-->
 
 <script>
 	import query from '../groq/home.groq?raw';
@@ -36,14 +41,14 @@
 <style>
 	.products {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		text-align: center;
 		margin-top: 40px;
 	}
 
-	@media screen and (max-width: 950px) {
+	@media screen and (min-width: 950px) {
 		.products {
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 
@@ -59,11 +64,17 @@
 	}
 
 	.products__image-text {
-		padding: 150px 30px 195px;
-		margin-left: 70px;
-		position: absolute;
-		opacity: 0.0;
-		color: var(--foreground);
+		display: none;
+	}
+
+	@media screen and (min-width: 950px) {
+		.products__image-text {
+			position: absolute;
+			display: inline;
+			padding: 150px 25px 195px 20px;
+			opacity: 0.0;
+			color: var(--foreground);
+		}
 	}
 
 	.products__image-text:hover {

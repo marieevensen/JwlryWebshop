@@ -1,29 +1,29 @@
 <template>
     <div v-if="loading">...</div>
 
-	<div class="product" v-else>
-			<div class="product__image">
-				<img :src="result.image.asset.url" alt="Bilde av produktet">
-			</div>
+	<main class="product" v-else>
+		<div class="product__image">
+			<img :src="result.image.asset.url" alt="Bilde av produktet">
+	    </div>
 
-            <div class="product__info">
-                <div class="info__name">
-                    {{ result.name }}
-                </div>
-
-                <div class="info__description">
-                    {{ result.description }}
-                </div>
-
-                <div class="info__price">
-                    {{ result.price }}kr
-                </div>
-
-                <button class="info__button" @click="addProductToCart(result)">
-                    Add to cart
-                </button>
+        <section class="product__info">
+            <div class="info__name">
+                {{ result.name }}
             </div>
-	</div>
+
+            <div class="info__description">
+                {{ result.description }}
+            </div>
+
+            <div class="info__price">
+                {{ result.price }}kr
+            </div>
+
+            <button class="info__button" @click="addProductToCart(result)">
+                Legg til i handlekurv
+            </button>
+        </section>
+	</main>
 </template>
 
 <script>
@@ -48,33 +48,27 @@
 
 <style>
     .product {
-		margin: 40px 0 0 100px;
+		margin: 30px 0 0 0;
         display: flex;
+        flex-direction: column;
+        align-items: center;
 	}
 
-    @media screen and (max-width: 700px) {
+    @media screen and (min-width: 950px) {
         .product {
-            margin: 30px 0 0 0;
-            flex-direction: column;
-            align-items: center;
+            margin: 40px 0 0 100px;
+            flex-direction: row;
         }
     }
 
 	.product__image {
-		width: 250px;
-		border: 2px solid var(--beige);
+		width: 200px;
 	}
 
-    @media screen and (max-width: 900px) {
+    @media screen and (min-width: 950px) {
         .product__image {
-            width: 200px;
-            border: none;
-        }
-    }
-
-    @media screen and (min-width: 700px) {
-        .product__info {
-            margin-left: 60px;
+            width: 250px;
+            margin-right: 60px;
         }
     }
 
@@ -91,9 +85,9 @@
         margin-bottom: 20px;
     }
 
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 950px) {
         .info__description {
-            width: 500px;
+            width: 450px;
         }
     }
 
