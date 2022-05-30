@@ -1,11 +1,11 @@
 <template>
 	<main class="cart">
-		<section class="cart__item" v-for="(item, index) in cartItems">
+		<article class="cart__item" v-for="(item, index) in cartItems">
             <img class="item__image" :src="item.product.image.asset.url" alt="Bilde av produktet du har i handlekurven din">
 
-			<span class="item__name">{{ item.product.name }}</span>
+			<p class="item__name">{{ item.product.name }}</p>
            	
-		    <span class="item__price">{{ item.product.price }}kr</span>
+		    <p class="item__price">{{ item.product.price }}kr</p>
  
 			<div class="item__quantity">
 				<button class="item__quantity--minus" @click="minusQuantity(item)" aria-label="Minsk antall">-</button>
@@ -16,12 +16,12 @@
 			</div>
 
 			<button class="item__remove-button" @click="removeItem(index)" aria-label="Slett produktet">X</button>
-		</section>
+		</article>
 
 		<section class="cart__purchase">
-			<span class="purchase__total-price">
+			<p class="purchase__total-price">
 				Total pris: {{ cartPriceTotal }}kr
-			</span>
+			</p>
 
 			<button class="purchase-button" @click="removeAllItems()">
 				Fullfør bestilling

@@ -2,26 +2,18 @@
     <div v-if="loading">...</div>
 
 	<main class="product" v-else>
-		<div class="product__image">
+		<figure class="product__image">
 			<img :src="result.image.asset.url" alt="Bilde av produktet">
-	    </div>
+        </figure>
 
         <section class="product__info">
-            <div class="info__name">
-                {{ result.name }}
-            </div>
+            <h3 class="info__name">{{ result.name }}</h3>
 
-            <div class="info__description">
-                {{ result.description }}
-            </div>
+            <p class="info__description">{{ result.description }}</p>
 
-            <div class="info__price">
-                {{ result.price }}kr
-            </div>
+            <p class="info__price">{{ result.price }}kr</p>
 
-            <button class="info__button" @click="addProductToCart(result)">
-                Legg til i handlekurv
-            </button>
+            <button class="info__button" @click="addProductToCart(result)">Legg til i handlekurv</button>
         </section>
 	</main>
 </template>
@@ -76,7 +68,6 @@
         margin-top: 20px;
         margin-bottom: 20px;
 		font-weight: bold;
-        font-size: 1.3em;
 	}
 
     .info__description {

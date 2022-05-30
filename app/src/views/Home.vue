@@ -1,6 +1,6 @@
 <template>
 	<main class="frontpage">
-		<section class="frontpage__top">
+		<div class="frontpage__top">
 			<span class="top__text">SMYKKER</span>
 
 			<span class="top__text--two">MOTE</span>
@@ -10,15 +10,15 @@
 			<img class="top__image--two" src="/images/image2.jpg" alt="Bilde av en modell med smykker fra butikken">
 			
 			<img class="top__image top__image--three" src="/images/image3.jpg" alt="Bilde av hender med smykker fra butikken">
-		</section>
+		</div>
 
-		<section class="frontpage__bottom">
-			<span class="bottom__text">FINN DIN INDRE SKJØNNHET</span>
+		<div class="frontpage__bottom">
+			<p class="bottom__text">FINN DIN INDRE SKJØNNHET</p>
 			
 			<img class="bottom__image--circle" src="/images/image5.jpg" alt="Bilde av en hals med halskjeder fra butikken">
 			
 			<img class="bottom__image" src="/images/image4.jpg" alt="Bilde av et øret med øredobber fra butikken">
-		</section>
+		</div>
 	</main>
 </template>
 

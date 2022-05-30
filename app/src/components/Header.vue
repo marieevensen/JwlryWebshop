@@ -4,7 +4,7 @@
             <img class="header__logo" src="/images/logo.png" alt="Logo til butikken Jewelry, klikk her for å gå til hjemmesiden">
         </RouterLink>
 
-        <section>
+        <nav>
             <RouterLink class="header__link header__home" :to="{ name: 'home' }">HJEM</RouterLink>
 
             <RouterLink class="header__link" :to="{ name: 'store' }">BUTIKK</RouterLink>
@@ -16,7 +16,7 @@
 
                 <span> {{ countItem }} </span>
             </RouterLink>
-        </section>
+        </nav>
     </header>
 </template>
 

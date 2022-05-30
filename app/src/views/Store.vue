@@ -2,21 +2,17 @@
     <div v-if="loading">...</div>
 
 	<main class="products" v-else>
-		<section v-for="product in result">
+		<article v-for="product in result">
 			<RouterLink  :to="{ name: 'product', params: { product_slug: product.slug.current }}" aria-label="Klikk her for å se produkt">
-				<div class="products__image-text">Klikk her for å se produkt</div>
+				<span class="products__image-text">Klikk her for å se produkt</span>
 
 				<img class="products__image" :src="product.image.asset.url" alt="bilde av produktet">
 			</RouterLink>
 
-			<div class="products__name">
-				{{ product.name }}
-			</div>
+			<p class="products__name">{{ product.name }}</p>
 
-			<div class="products__price">
-				{{ product.price }}kr
-			</div>
-		</section>
+			<p class="products__price">{{ product.price }}kr</p>
+		</article>
 	</main>
 </template>
 
