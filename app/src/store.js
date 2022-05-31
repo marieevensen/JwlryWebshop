@@ -17,7 +17,7 @@ export default {
 	},
 
 	// 1 Henter produktene som er i handlekurven
-	// 2 Henter lengden for å kunne skrive ut hvor mange produkter som er i handlekurven
+	// 2 Henter lengden for å kunne skrive ut hvor mange forskjellige produkter som er i handlekurven
 	
 	mutations: {
 		addItemToCart(state, product) {
@@ -44,8 +44,8 @@ export default {
 	},
 
 	// 1 For å legge til et produkt sjekkes det om produktet allerede er i handlekurven,
-	// hvis produktet er der, blir antallet plusset med 1,
-	// hvis produktet ikke er der, blir det lagt til
+	// 1.1 hvis produktet er der, blir antallet plusset med 1,
+	// 1.2 hvis produktet ikke er der, blir det lagt til
 	// 2 Fjerner produktet, ved å finne index og slette den
 	// 3 Fjerner alle produktene ved å finne lengden av handlekurven, deretter gjøre det til 0
 

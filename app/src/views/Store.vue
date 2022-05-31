@@ -17,7 +17,7 @@
 </template>
 
 <!-- Kommenterer script
-	Bruker slug for å kunne navigere til de forskjellige produktene
+	1 Bruker slug for å kunne navigere til de forskjellige produktene
 -->
 
 <script>
