@@ -1,6 +1,6 @@
 # JwlryWebshop
 
-In this project we learned about using Sanity, and retrieve data from this external source. I really recommend using Sanity.
+In this project I learned about using Sanity, and retrieve data from this external source. I really recommend using Sanity.
 
 I made a webstore called Jwlry. In this store i retrieved the products from Sanity.
 
