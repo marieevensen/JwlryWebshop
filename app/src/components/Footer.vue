@@ -1,6 +1,6 @@
 <template>
     <footer class="footer">
-        Laget av Marie Evensen
+        Laget av Jwlry AS
 
         <RouterLink :to="{ name: 'home' }">
             <img class="footer__logo" src="/images/logo.png" alt="Logo til butikken Jewelry, klikk her for å gå til hjemmesiden">
