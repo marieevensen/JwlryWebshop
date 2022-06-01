@@ -54,7 +54,7 @@
 			},
 
 			removeAllItems() {
-				this.$store.dispatch('removeAllItemsFromCart') && alert("Thanks for your order!")
+				this.$store.dispatch('removeAllItemsFromCart') && alert("Takk for din bestilling!")
 			},
 
 			plusQuantity(item) {
